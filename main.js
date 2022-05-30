@@ -24,17 +24,19 @@ while(true){
     // Write an action using console.log()
     // To debug: console.error('Debug messages...');
     
-    if (direction.indexOf('R')){
-        first_x = x++;
-    } else if (direction.indexOf('L')){
+    
+    if (direction.includes('L')){
         last_x = x--;
+    } else if (direction.includes('R')){
+        first_x = x++;
     }
-
-    if (direction.indexOf('U')) {
-        first_y = y--; 
-    } else if (direction.indexOf('D')){
-        last_y = y++
+    
+    if (direction.includes('U')) {
+        last_y = y--;
+    } else if  (direction.includes('D')){
+        first_y = y++;
     };
+
 
     x = Math.floor((first_x + last_x) /2) ;
     y = Math.floor((first_y + last_y) /2) ;
